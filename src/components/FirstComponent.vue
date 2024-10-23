@@ -1,13 +1,10 @@
 <template>
 <div>
     <h1>i am First Component</h1>
-    <div :class="className">Salem Bahri</div>
-    <!-- i can use method -->
-    <!-- <div :class="getLink()">Salem Bahri</div> -->
+    <button v-on:click="getName()">Click me</button>
+    <div>{{ salary }}</div>
+    <button v-on:click="salary++">Increment me</button>
 
-    <a :href="link" target=_blank>Google</a><br>
-    <img :src="linkImg" alt="">
-    
 </div>
 </template>
 
@@ -18,16 +15,15 @@ export default {
     name:'FirstComponent',
     data(){
         return{
-            className:'fl',
-            link:'http://google.com',
-            linkImg:'https://gratisography.com/wp-content/uploads/2024/01/gratisography-cyber-kitty-800x525.jpg'
-            
+            salary:1500
+
         }
     },
     methods:{
-        getLink(){
-            return 'fl'
+        getName(){
+            return alert ("hi  i am alert")
         }
+
     }
  }
 
