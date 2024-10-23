@@ -1,12 +1,12 @@
 <template>
 <div>
     <h1>i am First Component</h1>
-    <p>my name is : {{name}}</p>
-    <p>my age is : {{age}}</p>
-    <p>my country is : {{country[0]}}</p>
-    <p>I am maried : {{verif}}</p>
-    <p>{{getMessage()}}</p>
-    <p>{{getAge()}}</p>
+    <div :class="className">Salem Bahri</div>
+    <!-- i can use method -->
+    <!-- <div :class="getLink()">Salem Bahri</div> -->
+
+    <a :href="link" target=_blank>Google</a><br>
+    <img :src="linkImg" alt="">
     
 </div>
 </template>
@@ -18,28 +18,32 @@ export default {
     name:'FirstComponent',
     data(){
         return{
-            age:50,
-            name:'salem',
-            country:['tunisia','algerie','egypt','jordan'],
-            verif:true
+            className:'fl',
+            link:'http://google.com',
+            linkImg:'https://gratisography.com/wp-content/uploads/2024/01/gratisography-cyber-kitty-800x525.jpg'
+            
         }
     },
     methods:{
-        getMessage(){
-            return 'hello from function'
-        },
-        getAge(){
-            return 'my age is 50'
+        getLink(){
+            return 'fl'
         }
-
     }
+ }
 
-}
 </script>
 
 
 
 
 <style>
-
+.fl{
+    color: blueviolet;
+    font-size: 50px;
+    font-weight: bold;
+}
+a{
+    text-decoration: none;
+    font-size: 30px;
+}
 </style>
