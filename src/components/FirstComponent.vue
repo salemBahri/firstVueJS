@@ -1,20 +1,17 @@
 <template>
 <div>
-    <SecondComponent />
-    <h1>i am FirstComponent</h1>
-    
-
+    <h1>i am First Component</h1>
+    <h2>{{ msg }}</h2>
 </div>
 </template>
 
 
 <script>
-import SecondComponent from './SecondComponent';
 
 export default {
     name:'FirstComponent',
-    components:{
-        SecondComponent
+    props:{
+        msg:String
     }
 }
 </script>
@@ -23,9 +20,5 @@ export default {
 
 
 <style>
-h1{
-    color: brown;
-
-}
 
 </style>
