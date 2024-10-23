@@ -1,10 +1,8 @@
 <template>
 <div>
     <h1>i am First Component</h1>
-    <button v-on:click="getName()">Click me</button>
-    <div>{{ salary }}</div>
-    <button v-on:click="salary++">Increment me</button>
-
+    <div id="sal" style="font-weight: bold;">{{salary}}</div>
+    <input type="text" v-model="salary" @input="testInput">
 </div>
 </template>
 
@@ -20,8 +18,14 @@ export default {
         }
     },
     methods:{
-        getName(){
-            return alert ("hi  i am alert")
+        testInput(){
+            let s=document.getElementById('sal');
+            if ((this.salary>2000)&&(this.salary<4000)) {
+                s.style.color='green';
+                
+            } else {
+                s.style.color='red';
+            }
         }
 
     }
