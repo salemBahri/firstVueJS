@@ -1,7 +1,11 @@
 <template>
 <div>
     <h1>i am First Component</h1>
-    <h2>{{ msg }}</h2>
+    <p>my name is : {{name}}</p>
+    <p>my age is : {{age}}</p>
+    <p>my country is : {{country[0]}}</p>
+    <p>I am maried : {{verif}}</p>
+    
 </div>
 </template>
 
@@ -10,9 +14,15 @@
 
 export default {
     name:'FirstComponent',
-    props:{
-        msg:String
+    data(){
+        return{
+            age:50,
+            name:'salem',
+            country:['tunisia','algerie','egypt','jordan'],
+            verif:true
+        }
     }
+
 }
 </script>
 
